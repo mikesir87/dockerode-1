@@ -1,0 +1,40 @@
+{
+  "name": "typed-dockerode",
+  "version": "2.3.1",
+  "description": "Type definitions for https://github.com/apocas/dockerode",
+  "author": "typed-contrib",
+  "license": "MIT",
+  "homepage": "https://github.com/typed-contrib/dockerode#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/typed-contrib/dockerode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/typed-contrib/dockerode/issues"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "postinstall": "typings install && cd test && typings install",
+    "test": "tsc -p test"
+  },
+  "keywords": [
+    "typings",
+    "definitions",
+    "typescript",
+    "docker",
+    "remote",
+    "api",
+    "container",
+    "service",
+    "volume",
+    "typed-contrib",
+    "typed",
+    "tsd"
+  ],
+  "devDependencies": {
+    "typings": "^1.0.4",
+    "typescript": "^2.0.3"
+  }
+}
