@@ -3,11 +3,12 @@
 // Definitions by: Maxime LUCE <https://github.com/SomaticIT/>
 // Definitions: https://github.com/typed-contrib/dockerode
 
+import * as Modem from "docker-modem";
 import { Boolean, Callback, Dictionary } from "./util";
 
 /** Represents an Volume. */
 class Volume {
-    public modem: Object;
+    public modem: Modem;
     public name: string;
     
     /**
@@ -16,7 +17,7 @@ class Volume {
      * @param modem     docker-modem.
      * @param name        Volume's name.
      */
-    constructor(modem: Object, name: string);
+    constructor(modem: Modem, name: string);
 
     /**
      * Get information about this Volume.

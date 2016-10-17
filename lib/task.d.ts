@@ -3,14 +3,16 @@
 // Definitions by: Maxime LUCE <https://github.com/SomaticIT/>
 // Definitions: https://github.com/typed-contrib/dockerode
 
+import * as Modem from "docker-modem";
 import { Readable } from "stream";
+
 import { Boolean, Callback, Dictionary } from "./util";
 import { ServiceDefinition } from "./service";
 import { IPAMConfig } from "./network";
 
 /** Represents an Task. */
 class Task {
-    public modem: Object;
+    public modem: Modem;
     public id: string;
 
     /**
@@ -19,7 +21,7 @@ class Task {
      * @param modem     docker-modem.
      * @param id        Task's ID or name.
      */
-    constructor(modem: Object, id: string);
+    constructor(modem: Modem, id: string);
 
     /**
      * Get information about this Task.

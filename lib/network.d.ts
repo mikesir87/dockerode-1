@@ -3,13 +3,15 @@
 // Definitions by: Maxime LUCE <https://github.com/SomaticIT/>
 // Definitions: https://github.com/typed-contrib/dockerode
 
+import * as Modem from "docker-modem";
 import { Readable } from "stream";
+
 import { Boolean, Callback, Dictionary } from "./util";
 import { ContainerConfig, ExposedPort } from "./container";
 
 /** Represents an Network. */
 class Network {
-    public modem: Object;
+    public modem: Modem;
     public id: string;
     
     /**
@@ -18,7 +20,7 @@ class Network {
      * @param modem     docker-modem.
      * @param id        Network's ID.
      */
-    constructor(modem: Object, id: string);
+    constructor(modem: Modem, id: string);
 
     /**
      * Get low-level information about this Network.

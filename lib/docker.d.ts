@@ -3,6 +3,7 @@
 // Definitions by: Maxime LUCE <https://github.com/SomaticIT/>
 // Definitions: https://github.com/typed-contrib/dockerode
 
+import * as Modem from "docker-modem";
 import { EventEmitter } from "events";
 import { Readable, Duplex, Writable } from "stream";
 
@@ -18,7 +19,7 @@ import * as Exec from "./exec";
 import { Boolean, Callback, Dictionary, Filters, Timestamp, AuthConfig } from "./util";
 
 class Docker extends EventEmitter {
-    public modem: Object;
+    public modem: Modem;
 
     constructor(options?: Docker.SocketOptions | Docker.HostOptions);
 

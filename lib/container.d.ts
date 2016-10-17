@@ -3,13 +3,15 @@
 // Definitions by: Maxime LUCE <https://github.com/SomaticIT/>
 // Definitions: https://github.com/typed-contrib/dockerode
 
+import * as Modem from "docker-modem";
 import { Readable, Duplex } from "stream";
+
+import * as Exec from "./exec";
 import { Boolean, Callback, Dictionary } from "./util";
-import Exec = require("./exec");
 
 /** Represents a Container. */
 class Container {
-    public modem: Object;
+    public modem: Modem;
     public id: string;
     public defaultOptions: {
         top: Container.TopOptions;
@@ -38,7 +40,7 @@ class Container {
      * @param modem     docker-modem.
      * @param id        Container's ID or name.
      */
-    constructor(modem: Object, id: string);
+    constructor(modem: Modem, id: string);
 
     /**
      * Does not query Docker.

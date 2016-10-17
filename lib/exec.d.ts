@@ -3,12 +3,14 @@
 // Definitions by: Maxime LUCE <https://github.com/SomaticIT/>
 // Definitions: https://github.com/typed-contrib/dockerode
 
+import * as Modem from "docker-modem";
 import { Readable, Duplex } from "stream";
+
 import { Callback } from "./util";
 
 /** Represents an Exec setup. */
 class Exec {
-    public modem: Object;
+    public modem: Modem;
     public id: string;
     
     /**
@@ -17,7 +19,7 @@ class Exec {
      * @param modem     docker-modem
      * @param id        Exec's ID
      */
-    constructor(modem: Object, id: string);
+    constructor(modem: Modem, id: string);
 
     /**
      * Start this Exec instance.

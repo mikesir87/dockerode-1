@@ -3,13 +3,15 @@
 // Definitions by: Maxime LUCE <https://github.com/SomaticIT/>
 // Definitions: https://github.com/typed-contrib/dockerode
 
+import * as Modem from "docker-modem";
 import { Readable } from "stream";
+
 import { Boolean, Callback, AuthConfig } from "./util";
 import { ContainerConfig, ExposedPort } from "./container";
 
 /** Represents an Image. */
 class Image {
-    public modem: Object;
+    public modem: Modem;
     public name: string;
     
     /**
@@ -18,7 +20,7 @@ class Image {
      * @param modem     docker-modem.
      * @param name      Image's name.
      */
-    constructor(modem: Object, name: string);
+    constructor(modem: Modem, name: string);
 
     /**
      * Get low-level information about this Image.

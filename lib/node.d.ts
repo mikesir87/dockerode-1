@@ -3,11 +3,13 @@
 // Definitions by: Maxime LUCE <https://github.com/SomaticIT/>
 // Definitions: https://github.com/typed-contrib/dockerode
 
+import * as Modem from "docker-modem";
+
 import { Callback, Dictionary } from "./util";
 
 /** Represents an Node. */
 class Node {
-    public modem: Object;
+    public modem: Modem;
     public id: string;
     
     /**
@@ -16,7 +18,7 @@ class Node {
      * @param modem     docker-modem.
      * @param id        Node's ID.
      */
-    constructor(modem: Object, id: string);
+    constructor(modem: Modem, id: string);
     
     /**
      * Get low-level information about this Node.
