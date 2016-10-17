@@ -46,8 +46,7 @@ Some resources to help writing Typescript type definitions:
 
 ## Tests
 
-This type definitions are tested using source `dockerode` `chai` tests.
- * [Services](https://github.com/apocas/dockerode/tree/master/test/)
+This type definitions are tested using source `dockerode` `chai` [tests](https://github.com/apocas/dockerode/tree/master/test/).
 
 ## License
 
