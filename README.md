@@ -36,7 +36,7 @@ cd dockerode
 # Install modules and dependencies
 npm install
 
-# Test typings over dockerode samples and tests
+# Test typings over dockerode tests
 npm test
 ```
 
@@ -46,9 +46,8 @@ Some resources to help writing Typescript type definitions:
 
 ## Tests
 
-This type definitions are tested using source `dockerode` `samples` and `services` tests.
- * [Samples](https://github.com/apocas/dockerode/tree/master/examples/samples)
- * [Services](https://github.com/apocas/dockerode/tree/master/test/services)
+This type definitions are tested using source `dockerode` `chai` tests.
+ * [Services](https://github.com/apocas/dockerode/tree/master/test/)
 
 ## License
 
